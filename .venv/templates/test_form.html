@@ -1,0 +1,12 @@
+<form method="POST">
+    <h1>New Task: </h1>
+
+    {{form.csrf_token}} 
+    {{form.task_name.label}} {{form.task_name()}} <br />
+    {{form.description.label}} {{form.description}}
+    {{form.submit()}} 
+    <!--form action="/clear"><input type="submit" value="Clear"> </form> -->
+    
+
+
+</form>
