@@ -45,6 +45,7 @@ const Task_view = ({id, name, getLatestTasks}) => {
 
     useEffect(() => {
         setTaskEdit(name)
+        setIsEditing(false)
     }, [id])
 
     const processDelete = () => {
