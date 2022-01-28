@@ -20,7 +20,9 @@ Project is created with:
 - [Install React](https://www.freecodecamp.org/news/install-react-with-create-react-app/), cd into the my-app folder and start the React app
 
 ## Most important files
-
+- [Front-end file 1] (my-app/src/App.js)
+- [Front-end file 2] (my-app/src/index.js)
+- [Back-end file] (.venv/app.py)
 
 ## Image
 
