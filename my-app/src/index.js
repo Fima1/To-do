@@ -94,7 +94,7 @@ const Task_view = ({id, name, getLatestTasks}) => {
     return(
     <li key={id.toString()} className='taskLi'>
         <ContentSpan editState={isEditing} taskEdit={taskEdit} handleEditChange = {handleEditChange} processEditSubmit = {processEditSubmit}/>
-        <button className='taskEdit' onClick={startEdit}>Edit</button>
+        <button className='taskEdit' style={(isEditing)?{display: 'none'}:{display: 'inline'}} onClick={startEdit}>Edit</button>
         <button className='taskDelete' onClick={processDelete}>Delete</button>
     </li>
     )
