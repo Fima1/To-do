@@ -23,6 +23,7 @@ Project is created with:
 - [Front-end file 1](my-app/src/App.js)
 - [Front-end file 2](my-app/src/index.js)
 - [Back-end file](.venv/app.py)
+- [Style sheet](my-app/src/index.css)
 
 ## Website look
 
