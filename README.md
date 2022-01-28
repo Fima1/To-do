@@ -24,6 +24,6 @@ Project is created with:
 - [Front-end file 2](my-app/src/index.js)
 - [Back-end file](.venv/app.py)
 
-## Website demo
+## Website look
 
 ![alt text](https://github.com/Fima1/To-do_list/blob/main/website_screenshot.png?raw=true)
