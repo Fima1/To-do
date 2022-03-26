@@ -28,7 +28,3 @@ Project is created with:
 ## Website look
 
 ![alt text](https://github.com/Fima1/To-do_list/blob/main/website_screenshot.png?raw=true)
-
-
-
-## updating readme
