@@ -2,10 +2,15 @@ import React, {useState, useEffect} from 'react'
 import {Print_taskList, Form} from './index.js'
 
 
+const defaultValues = {
+  name: "",
+  description: ""
+}
+
 function App(){
   
   const [data, setData] = useState({});
-  const [addTask, setAddTask] = useState('')
+  const [addTask, setAddTask] = useState(defaultValues)
 
   useEffect(() => {
     fetch("http://localhost:5000/api").then(
@@ -26,14 +31,15 @@ function App(){
     fetch("http://localhost:5000/create_task", {
       method: 'POST',
       body: JSON.stringify({
-        content: addTask
+        name: addTask.name,
+        description: addTask.description
       }),
       headers: {
         "Content-type": "application/json; charset=UTF-8"
       }
     }).then(response => response.json())
     .then(message => {console.log(message)
-    setAddTask('')
+    setAddTask(defaultValues)
     getLatestTasks()
   })
   }

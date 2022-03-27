@@ -24,8 +24,7 @@ def json_test():
 @app.route('/create_task', methods=['POST'])
 def create():
     request_data = json.loads(request.data)
-    task = Task(task_name=request_data['content'])
-   
+    task = Task(task_name=request_data['name'], task_description =  request_data['description'])
     db.session.add(task)
     db.session.commit()
 
@@ -44,7 +43,8 @@ def delete():
 def edit():
     request_data = json.loads(request.data)
     task = Task.query.filter_by(id=request_data['id']).first()
-    task.task_name = request_data['content']
+    task.task_name = request_data['name']
+    task.task_description = request_data['description']
     db.session.add(task)
     db.session.commit()
 
@@ -54,6 +54,7 @@ class Task(db.Model):
     __tablename__ = 'tasks'
     id = db.Column(db.Integer, primary_key=True)
     task_name = db.Column(db.Text)
+    task_description = db.Column(db.Text)
 
     def __str__(self):
         return f'{self.id} {self.content}'
@@ -62,7 +63,8 @@ class Task(db.Model):
 def task_serialize(task):
     return {
         'id': task.id,
-        'name': task.task_name
+        'name': task.task_name,
+        'description': task.task_description
         }
 
 @app.route('/')

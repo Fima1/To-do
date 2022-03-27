@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Card from '@mui/material/Card';
+import { TextField } from '@mui/material';
 
 
 let el = <div id='header'><h1 > To-do List </h1> </div>
@@ -14,7 +15,11 @@ ReactDOM.render(el, document.getElementById('container1'))
 export const Form = ({userInput, onFormChange, onFormSubmit}) =>{
     
     const handleChange = (e) => {
-        onFormChange(e.target.value)
+        const { name, value } = e.target;
+        onFormChange({
+        ...userInput,
+        [name]: value,
+        });
     }
 
     const handleSubmit = (e) =>{
@@ -26,7 +31,8 @@ export const Form = ({userInput, onFormChange, onFormSubmit}) =>{
     return(
         <>
             <form onSubmit={handleSubmit}>
-                <input type="text" required value={userInput} onChange={handleChange} className="newTaskField" autoFocus placeholder='Enter new task'></input>
+                <input type="text" name='name' required value={userInput.name} onChange={handleChange} className="newTaskField" autoFocus placeholder='Enter new task'></input>
+                <TextField variant='outlined' name='description' value={userInput.description} onChange={handleChange} multiline placeholder='Add description' />
                 <input type="submit" className='newTaskSubmit'></input>
             </form>
         </>
@@ -35,18 +41,18 @@ export const Form = ({userInput, onFormChange, onFormSubmit}) =>{
 
 
 export const Print_taskList = ({taskList, LatestTasks}) => {
-const listItems = Object.values(taskList).map((task) => <Task_view id={task.id} name={task.name} getLatestTasks = {LatestTasks} />);
+const listItems = Object.values(taskList).map((task) => <Task_view id={task.id} name={task.name} description={task.description} getLatestTasks = {LatestTasks} />);
 return <ul className='taskUl'>{listItems}</ul>;
 }
 
  
-const Task_view = ({id, name, getLatestTasks}) => {
+const Task_view = ({id, name, description, getLatestTasks}) => {
 
-    const [taskEdit, setTaskEdit] = useState(name);
+    const [taskEdit, setTaskEdit] = useState({name: name, description: description});
     const [isEditing, setIsEditing] = useState(false);
 
     useEffect(() => {
-        setTaskEdit(name)
+        setTaskEdit({name: name, description: description})
         setIsEditing(false)
     }, [id])
 
@@ -74,7 +80,8 @@ const Task_view = ({id, name, getLatestTasks}) => {
         fetch("http://localhost:5000/edit_task", {
             method: 'POST',
             body: JSON.stringify({
-                content: taskEdit,
+                name: taskEdit.name,
+                description: taskEdit.description,
                 id: id
             }),
             headers: {
@@ -109,14 +116,23 @@ const ContentSpan = ({editState, taskEdit, handleEditChange, processEditSubmit})
         return <EditForm editInput={taskEdit} onEditChange={handleEditChange} onEditSubmit={processEditSubmit}/>;
     }
     else{
-        return <span className='taskText'> {taskEdit} </span>;
+        return (
+        <>
+        <span className='taskText'> {taskEdit.name} </span>
+        <span>|| </span>
+        <span>{taskEdit.description}</span>
+        </>);
     }
 }
 
 const EditForm = ({editInput, onEditChange, onEditSubmit}) => {
 
     const handleChange = (e) => {
-        onEditChange(e.target.value)
+        const { name, value } = e.target;
+        onEditChange({
+        ...editInput,
+        [name]: value,
+        });
     }
 
     const handleSubmit = (e) =>{
@@ -127,7 +143,8 @@ const EditForm = ({editInput, onEditChange, onEditSubmit}) => {
 
     return(
         <form className='editForm' onSubmit={handleSubmit}>
-            <input className="editTextField" type="text" value={editInput} style={{width: editInput.length + "ch"}} required autoFocus onChange={handleChange}/>
+            <input className="editTextField" type="text" name='name' value={editInput.name} style={{width: editInput.length + "ch"}} required autoFocus onChange={handleChange}/>
+            <TextField variant='outlined' name='description' value={editInput.description} onChange={handleChange} multiline placeholder='Add description' />
             <input className="editSubmit" type="submit" value="Submit" />
         </form>
     )
