@@ -14,7 +14,7 @@ import{React,
        TextField,
        Button,
        Avatar     
-      } from '../collections/inputs';
+      } from '../collections/imports';
 
 
 const Header = ({userInput, onFormChange, onFormSubmit}) => {

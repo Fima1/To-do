@@ -21,9 +21,9 @@ import {React,
         ExpandMoreIcon,
         styled,
         Collapse
-        } from '../collections/inputs';
+        } from '../collections/imports';
 
-        
+
 const useStyles = makeStyles({
     title: {
         fontSize: '21px'
