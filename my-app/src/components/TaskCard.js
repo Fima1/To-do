@@ -25,6 +25,8 @@ import Grid from '@mui/material/Grid';
 
 // figure out moving down cards when expanding
 // delete old code
+// delete isEditing state (?) 
+// consolidate inputs
 
 const useStyles = makeStyles({
     action: {
