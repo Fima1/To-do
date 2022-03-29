@@ -21,36 +21,9 @@ import {React,
         ExpandMoreIcon,
         styled,
         Collapse
-        } from '../collections';
-/*
-import React from 'react';
-import Card from '@mui/material/Card'
-import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import DialogTitle from '@mui/material/DialogTitle';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import IconButton from '@mui/material/IconButton';
-import EditIcon from '@mui/icons-material/Edit';
-import TextField from '@mui/material/TextField';
-import Checkbox from '@mui/material/Checkbox';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import makeStyles from '@material-ui/styles/makeStyles';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import styled from '@mui/material/styles/styled';
-import Collapse from '@mui/material/Collapse';
-*/
+        } from '../collections/inputs';
 
-
-// consolidate inputs
-// add aria labels ?
-
+        
 const useStyles = makeStyles({
     title: {
         fontSize: '21px'

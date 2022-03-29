@@ -5,9 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
-
 let el1 = <App />
-ReactDOM.render(el1, document.getElementById('container2'))
+ReactDOM.render(el1, document.getElementById('container1'))
 
 
 // If you want to start measuring performance in your app, pass a function

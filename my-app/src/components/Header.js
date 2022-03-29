@@ -1,19 +1,20 @@
-import React from 'react';
 import { useState} from 'react';
-import AppBar from "@mui/material/AppBar";
-import Toolbar from '@mui/material/Toolbar';
-import DialogTitle from '@mui/material/DialogTitle';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import IconButton from '@mui/material/IconButton';
-import AddIcon from '@mui/icons-material/Add';
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
+import{React,
+       AppBar,
+       Toolbar,
+       Dialog,
+       DialogTitle,
+       DialogActions,
+       DialogContent,
+       DialogContentText,
+       IconButton,
+       AddIcon,
+       Box,
+       Typography,
+       TextField,
+       Button,
+       Avatar     
+      } from '../collections/inputs';
 
 
 const Header = ({userInput, onFormChange, onFormSubmit}) => {

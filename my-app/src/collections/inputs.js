@@ -20,3 +20,7 @@ export {default as makeStyles } from '@material-ui/styles/makeStyles';
 export {default as ExpandMoreIcon } from '@mui/icons-material/ExpandMore';
 export {default as styled } from '@mui/material/styles/styled';
 export {default as Collapse} from '@mui/material/Collapse';
+export {default as AppBar} from "@mui/material/AppBar";
+export {default as Toolbar} from '@mui/material/Toolbar';
+export {default as AddIcon} from '@mui/icons-material/Add';
+export {default as Avatar} from '@mui/material/Avatar';
