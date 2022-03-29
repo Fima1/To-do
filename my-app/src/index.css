@@ -7,140 +7,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 body{
   background: linear-gradient(90deg,#f5f7fa 0%, #c3cfe2 100%); 
 }
 
-#header {
-  position: relative;
-  right: 20px;
-  color: rgba(74, 103, 133, 0.9);
-  text-shadow: 0 .5rem 1rem rgba(50, 0, 100, .1);
-  text-align: center;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 25%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.1) 100%);
-  text-transform: uppercase;
-}
-
-.taskDelete, .taskEdit{
-  position: relative;
-  left: 10px;
-  border-radius: 6px;
-  border: solid 1px gray;
-  color: #fff;
-  height: 25px;
-  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
-  background-origin: border-box;
-  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
-}
-
-.taskDelete{
-  left: 15px;
-}
 
 .taskLi{
   list-style-type: none;
   height: 40px;
   width: fit-content;
- /* background: linear-gradient(90deg, rgba(115, 60, 174, 0.75) 25%, rgba(115, 60, 174, 0.60) 70%, rgba(115, 60, 174, 0.30) 100%);
- */margin: 10px;
+  margin: 10px;
   padding-right: 25px;
   padding-left: 15px;
   padding-top: 15px;
   padding-bottom: 10px;
   border-radius: 15px;
-  font-weight: 500;
 }
 
-.newTaskField{
-  border: 2px solid gray;
-  border-radius: 5px;
-  width: 87%;
-  height: 20px;
-  background-color: #f5f5f5;
-  position: relative;
-  left: 50px;
-}
-
-.newTaskField:hover{
-  border: 1.5px solid #009688;
-  background-color: white;
-}
-
-
-.newTaskSubmit{
-  position: relative;
-  left: 60px;
-  height: 26px;
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: rgba(215, 215, 217, 0.6);
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
- 
-}
-
-.newTaskSubmit:hover {
-  background: #F6F9FE;
-  color: #174ea6;
-}
-
-.newTaskSubmit:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
-}
-
-.newTaskSubmit:focus {
-  outline: none;
-  border: 2px solid #4285f4;
-}
-
-.taskDelete:focus, .taskEdit:focus{
-  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
-  outline: 0;
-}
-
-.taskDelete:hover, .taskEdit:hover{
-  cursor: pointer;
-  background: linear-gradient(180deg, rgba(225, 237, 250, 0.8) 0%, rgba(65, 132, 201, 0.9) 100%);
-}
-
-.editTextField{
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 20px;
-  background-color: #f5f5f5;
-}
-
-.editForm{
-  display: inline;
-}
-
-.editSubmit{
-  position: relative;
-  left: 10px;
-  height: 23.5px;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: rgba(230, 230, 230, 0.85);
-  cursor: pointer;
-}
-
-.editSubmit:hover {
-  background: #F6F9FE;
-  color: #174ea6;
-}
-
-.editSubmit:active {
-  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
-  outline: none;
-}
-
-.editSubmit:focus {
-  outline: none;
-  border: 2px solid #4285f4;
-}

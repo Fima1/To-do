@@ -1,6 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import {Print_taskList} from './index.js'
 import Header from './components/Header'
+import TaskCard from './components/TaskCard';
+
+
+const Print_taskList = ({taskList, LatestTasks}) => {
+const listItems = Object.values(taskList).map((task) => <TaskCard id={task.id} name={task.name} description={task.description} getLatestTasks = {LatestTasks} />);
+return <ul className='taskUl'>{listItems}</ul>;
+}
 
 
 const defaultValues = {

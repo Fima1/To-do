@@ -1,5 +1,29 @@
-import React, { useEffect } from 'react';
-import { useState} from 'react';
+import {useEffect, useState} from 'react';
+import {React,
+        Card,
+        CardContent, 
+        CardHeader,
+        Button,
+        Typography,
+        Box,
+        DialogTitle,
+        Dialog,
+        DialogActions,
+        DialogContent,
+        DialogContentText,
+        IconButton,
+        EditIcon,
+        TextField,
+        Checkbox,
+        CheckCircleIcon,
+        CheckCircleOutlineIcon,
+        makeStyles,
+        ExpandMoreIcon,
+        styled,
+        Collapse
+        } from '../collections';
+/*
+import React from 'react';
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
@@ -17,15 +41,13 @@ import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import { makeStyles } from '@material-ui/styles';
+import makeStyles from '@material-ui/styles/makeStyles';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { styled } from '@mui/material/styles';
+import styled from '@mui/material/styles/styled';
 import Collapse from '@mui/material/Collapse';
-import Grid from '@mui/material/Grid';
+*/
 
-// figure out moving down cards when expanding
-// delete old code
-// delete isEditing state (?) 
+
 // consolidate inputs
 // add aria labels ?
 
@@ -53,12 +75,10 @@ const TaskCard = ({id, name, description, getLatestTasks}) => {
     const classes = useStyles();
 
     const [taskEdit, setTaskEdit] = useState({name: name, description: description});
-    const [isEditing, setIsEditing] = useState(false);
     const [expanded, setExpanded] = useState(false);
    
     useEffect(() => {
         setTaskEdit({name: name, description: description})
-        setIsEditing(false)
     }, [id])
 
     const processDelete = () => {
@@ -95,15 +115,9 @@ const TaskCard = ({id, name, description, getLatestTasks}) => {
         }).then(response => response.json())
             .then(message => {
                 console.log(message);
-                setIsEditing(false);
                 getLatestTasks();
             });
     }
-
-    const startEdit = () => {
-        setIsEditing(true)
-    }
-
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
@@ -114,7 +128,7 @@ const TaskCard = ({id, name, description, getLatestTasks}) => {
     <li key={id.toString()} className='taskLi'>
         <Card>
                 <Checkbox 
-                    sx={{position: "fixed", mt: 1.5}}
+                    sx={{position: "absolute", mt: 1.4}}
                     onClick={processDelete}
                     icon={<CheckCircleOutlineIcon sx={{color: "#757575"}} />}
                     checkedIcon={<CheckCircleIcon/>}/>
