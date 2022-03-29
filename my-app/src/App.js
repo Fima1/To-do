@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
-import {Print_taskList, Form} from './index.js'
+import {Print_taskList} from './index.js'
+import Header from './components/Header'
 
 
 const defaultValues = {
@@ -55,7 +56,10 @@ function App(){
 
   return (
     <div>
-      <Form userInput={addTask} onFormChange={processFormChange} onFormSubmit={processFormSubmit}/>
+      <Header 
+        userInput={addTask}
+        onFormChange={processFormChange}
+        onFormSubmit={processFormSubmit} />
       <Print_taskList taskList={data} LatestTasks = {getLatestTasks}/>
     </div>
   );
