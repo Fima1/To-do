@@ -5,12 +5,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { TextField } from '@mui/material';
-
+import Grid from '@mui/material/Grid';
+import TaskCard from './components/TaskCard';
 
 
 export const Print_taskList = ({taskList, LatestTasks}) => {
-const listItems = Object.values(taskList).map((task) => <Task_view id={task.id} name={task.name} description={task.description} getLatestTasks = {LatestTasks} />);
-return <ul className='taskUl'>{listItems}</ul>;
+const listItems = Object.values(taskList).map((task) => <TaskCard id={task.id} name={task.name} description={task.description} getLatestTasks = {LatestTasks} />);
+return <Grid container direction="column"><ul className='taskUl'>{listItems}</ul></Grid>;
 }
 
  
@@ -121,7 +122,6 @@ const EditForm = ({editInput, onEditChange, onEditSubmit}) => {
 
 let el1 = <App />
 ReactDOM.render(el1, document.getElementById('container2'))
-
 
 
 // If you want to start measuring performance in your app, pass a function

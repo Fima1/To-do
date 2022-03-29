@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState} from 'react';
 import AppBar from "@mui/material/AppBar";
 import Toolbar from '@mui/material/Toolbar';
@@ -16,10 +16,6 @@ import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 
 
-// header: AppBar with an addicon IconButton
-// Dialog: opens when the iconbutton is clicked, form for adding new task
-
-
 const Header = ({userInput, onFormChange, onFormSubmit}) => {
     
 
@@ -33,9 +29,7 @@ const Header = ({userInput, onFormChange, onFormSubmit}) => {
                         onFormSubmit={onFormSubmit}/>
                     <Typography
                         variant="h5"
-                        component="div"
-                        sx={{display: {sx: "flex"}, justifyContent: "center"}}
-                        >
+                        component="div">
                             TO-DO LIST
                     </Typography>
                 </Toolbar>
@@ -72,11 +66,11 @@ const FormDialog = ({userInput, onFormChange, onFormSubmit}) => {
       }
 
     const handleCancel = () => {
+        handleClose()
         onFormChange({
             name: "",
             description: ""
         })
-        handleClose()
     }
 
     return(
@@ -88,16 +82,18 @@ const FormDialog = ({userInput, onFormChange, onFormSubmit}) => {
         color="inherit"
         aria-label="addTask"
         sx={{mr: 3, ml: 3}}>
-            <Avatar>
+            <Avatar sx={{bgcolor: "#4d90dd"}}>
                 <AddIcon/>
             </Avatar>
         </IconButton>
 
         <Dialog open={open} onClose={handleClose}>
             <DialogTitle>New Task</DialogTitle>
+           
             <DialogContentText sx={{ml: 3}}>
-                Enter new task description
+                Enter new task description:
             </DialogContentText>
+           
             <form onSubmit={handleSubmit}>
             <DialogContent>
             <TextField
@@ -120,14 +116,14 @@ const FormDialog = ({userInput, onFormChange, onFormSubmit}) => {
                 multiline
                 placeholder='Add description' />
             </DialogContent>
+           
             <DialogActions>
                 <Button onClick={handleCancel}>
                     Cancel
                 </Button>
                 <Button type='submit'>
                     Submit
-                </Button>
-                
+                </Button> 
             </DialogActions>
             </form>
         </Dialog>
