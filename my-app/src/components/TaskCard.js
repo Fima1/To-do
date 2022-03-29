@@ -27,12 +27,9 @@ import Grid from '@mui/material/Grid';
 // delete old code
 // delete isEditing state (?) 
 // consolidate inputs
+// add aria labels ?
 
 const useStyles = makeStyles({
-    action: {
-        flex: '0 1 auto',
-        flexBasis: 'start'
-    },
     title: {
         fontSize: '21px'
     }
@@ -113,7 +110,7 @@ const TaskCard = ({id, name, description, getLatestTasks}) => {
       };
     
     return(
-    <Grid item xs="auto">
+    <Box sx={(expanded) ? ((taskEdit.description != "") ? {mb: 15} : {mb: 12}): {mb: 1}}>
     <li key={id.toString()} className='taskLi'>
         <Card>
                 <Checkbox 
@@ -140,20 +137,20 @@ const TaskCard = ({id, name, description, getLatestTasks}) => {
                         </ExpandMore>
                     </>
                     }
-                    classes={{ action: classes.action, title: classes.title }}
+                    classes={{title: classes.title }}
                     title={taskEdit.name}
                     >
                     
                 </CardHeader>
                 <Collapse in={expanded} timeout="auto" unmountOnExit>
                     <CardContent>
-                    <Typography variant="h6">Description: </Typography>
-                    <Typography paragraph>{taskEdit.description}</Typography>
+                    <Typography variant="h6" color="text.secondary">Description: </Typography>
+                    <Typography paragraph >{taskEdit.description}</Typography>
                     </CardContent>
                 </Collapse>
         </Card>
     </li>
-    </Grid>
+    </Box>
     )
 }
 
