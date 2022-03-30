@@ -1,30 +1,25 @@
 # To-Do list
-To-do website that supports task creation, deletion and editing. Stores the to-dos in a database to ensure they persist on refresh.
+To-do website that supports task creation, deletion and editing.
 
 ## Technologies
 Project is created with:
-- Front-end: React
+- Front-end: React, Material UI
 - Back-end: Flask
 - Database: SQLAlchemy + SQLite
 
 ## Installation and Launch
-- [Install Flask](https://flask.palletsprojects.com/en/2.0.x/installation/)
-- Install SQLAlchemy using 
+- [Install Python](https://www.python.org/downloads/)
+- [Install Node.js](https://nodejs.org/en/)
+- Cd into the my-app folder and run
   ```
-  pip install -U Flask-SQLAlchemy
+  npm install
+  npm start
   ```
-- Install Flask-CORS extension using
-  ```
-  pip install -U flask-cors
-  ```
-- [Install React](https://www.freecodecamp.org/news/install-react-with-create-react-app/), cd into the my-app folder and start the React app
-
-## Most important files
-- [Front-end file 1](my-app/src/App.js)
-- [Front-end file 2](my-app/src/index.js)
+## Most Important Files
+- [App.js](my-app/src/App.js)
+- Components: [Header.js](my-app/src/components/Header.js), [TaskCard.js](my-app/src/components/TaskCard.js) 
 - [Back-end file](.venv/app.py)
-- [Style sheet](my-app/src/index.css)
 
-## Website look
+## Website Demo
 
-![alt text](https://github.com/Fima1/To-do_list/blob/main/website_screenshot.png?raw=true)
+![alt text](https://github.com/Fima1/To-do_list/blob/main/To-do_website_demo1.gif?raw=true)
