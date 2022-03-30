@@ -18,7 +18,7 @@ Project is created with:
 ## Most Important Files
 - [App.js](my-app/src/App.js)
 - Components: [Header.js](my-app/src/components/Header.js), [TaskCard.js](my-app/src/components/TaskCard.js) 
-- [Back-end file](.venv/app.py)
+- Back-end file: [app.py](.venv/app.py)
 
 ## Website Demo
 
