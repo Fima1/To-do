@@ -52,6 +52,7 @@ const TaskCard = ({id, name, description, getLatestTasks}) => {
    
     useEffect(() => {
         setTaskEdit({name: name, description: description})
+        setExpanded(false);
     }, [id])
 
     const processDelete = () => {
