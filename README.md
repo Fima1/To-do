@@ -10,6 +10,10 @@ Project is created with:
 ## Installation and Launch
 - [Install Python](https://www.python.org/downloads/)
 - [Install Node.js](https://nodejs.org/en/)
+- Clone the repository using
+  ```
+  git clone https://github.com/Fima1/To-do
+  ```
 - Cd into the my-app folder and run
   ```
   npm install
