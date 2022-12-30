@@ -19,6 +19,7 @@ Project is created with:
   npm install
   npm start
   ```
+- Run app.py to start server
 ## Most Important Files
 - [App.js](my-app/src/App.js)
 - Components: [Header.js](my-app/src/components/Header.js), [TaskCard.js](my-app/src/components/TaskCard.js) 
