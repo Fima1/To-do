@@ -1,11 +1,11 @@
 # To-Do list
-To-do website that supports task creation, deletion and editing.
+To-do web app that supports task creation, deletion and editing.
 
 ## Technologies
 Project is created with:
 - Front-end: React, Material UI
 - Back-end: Flask
-- Database: SQLAlchemy + SQLite
+- Database: SQLite
 
 ## Installation and Launch
 - [Install Python](https://www.python.org/downloads/)
