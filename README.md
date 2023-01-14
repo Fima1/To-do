@@ -7,6 +7,11 @@ Project is created with:
 - Back-end: Flask
 - Database: SQLite
 
+## Most Important Files
+- [App.js](my-app/src/App.js)
+- Components: [Header.js](my-app/src/components/Header.js), [TaskCard.js](my-app/src/components/TaskCard.js) 
+- Back-end file: [app.py](.venv/app.py)
+
 ## Installation and Launch
 - [Install Python](https://www.python.org/downloads/)
 - [Install Node.js](https://nodejs.org/en/)
@@ -20,10 +25,6 @@ Project is created with:
   npm start
   ```
 - Run app.py to start server
-## Most Important Files
-- [App.js](my-app/src/App.js)
-- Components: [Header.js](my-app/src/components/Header.js), [TaskCard.js](my-app/src/components/TaskCard.js) 
-- Back-end file: [app.py](.venv/app.py)
 
 ## App Demo
 
