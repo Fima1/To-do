@@ -25,6 +25,6 @@ Project is created with:
 - Components: [Header.js](my-app/src/components/Header.js), [TaskCard.js](my-app/src/components/TaskCard.js) 
 - Back-end file: [app.py](.venv/app.py)
 
-## Website Demo
+## App Demo
 
 ![alt text](https://github.com/Fima1/To-do_list/blob/main/To-do_website_demo1.gif?raw=true)
