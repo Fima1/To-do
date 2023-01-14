@@ -1,4 +1,4 @@
-# To-Do list
+# To-Do
 To-do web app that supports task creation, deletion and editing.
 
 ## Technologies
